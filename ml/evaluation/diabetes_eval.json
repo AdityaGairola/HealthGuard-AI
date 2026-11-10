@@ -1,0 +1,129 @@
+{
+  "disease": "diabetes",
+  "best_model": "Random Forest",
+  "best_metrics": {
+    "model": "Random Forest",
+    "accuracy": 0.8312,
+    "precision": 0.7917,
+    "recall": 0.7037,
+    "f1": 0.7451,
+    "roc_auc": 0.8731,
+    "confusion_matrix": [
+      [
+        90,
+        10
+      ],
+      [
+        16,
+        38
+      ]
+    ]
+  },
+  "all_results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.8377,
+      "precision": 0.7636,
+      "recall": 0.7778,
+      "f1": 0.7706,
+      "roc_auc": 0.8993,
+      "confusion_matrix": [
+        [
+          87,
+          13
+        ],
+        [
+          12,
+          42
+        ]
+      ]
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.8312,
+      "precision": 0.7917,
+      "recall": 0.7037,
+      "f1": 0.7451,
+      "roc_auc": 0.8731,
+      "confusion_matrix": [
+        [
+          90,
+          10
+        ],
+        [
+          16,
+          38
+        ]
+      ]
+    },
+    {
+      "model": "SVM",
+      "accuracy": 0.8571,
+      "precision": 0.82,
+      "recall": 0.7593,
+      "f1": 0.7885,
+      "roc_auc": 0.8811,
+      "confusion_matrix": [
+        [
+          91,
+          9
+        ],
+        [
+          13,
+          41
+        ]
+      ]
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.8117,
+      "precision": 0.7451,
+      "recall": 0.7037,
+      "f1": 0.7238,
+      "roc_auc": 0.8765,
+      "confusion_matrix": [
+        [
+          87,
+          13
+        ],
+        [
+          16,
+          38
+        ]
+      ]
+    }
+  ],
+  "cross_validation_f1": {
+    "Logistic Regression": 0.689241876016119,
+    "Random Forest": 0.7314642429879088,
+    "SVM": 0.6693268589585536,
+    "XGBoost": 0.6945379200782387
+  },
+  "feature_importance": {
+    "Pregnancies": 0.0883,
+    "Glucose": 0.3001,
+    "BloodPressure": 0.0894,
+    "SkinThickness": 0.087,
+    "Insulin": 0.1071,
+    "BMI": 0.1374,
+    "DiabetesPedigreeFunction": 0.0856,
+    "Age": 0.1052
+  },
+  "feature_cols": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "dataset_info": {
+    "source": "Pima Indians Diabetes Dataset (Smith et al., 1988)",
+    "note": "Zero-value replacements applied for physiologically impossible values",
+    "total_samples": 768,
+    "positive_cases": 268,
+    "negative_cases": 500
+  }
+}
