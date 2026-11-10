@@ -823,3 +823,221 @@
         padding: 10px !important;
     }
 }
+
+/* ==========================================================
+   HEALTHGUARD AI — IMPROVED SIDEBAR NAVIGATION
+   Scoped only to sidebar radio navigation
+========================================================== */
+
+/* Give sidebar content more breathing room */
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    gap: 0.65rem;
+}
+
+/* Navigation group spacing */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] {
+    gap: 10px !important;
+}
+
+/* Individual navigation items */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 49px !important;
+    padding: 11px 14px !important;
+    margin: 0 !important;
+    border-radius: 11px !important;
+    border: 1px solid transparent !important;
+    background: rgba(255, 255, 255, 0.045) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Larger navigation text */
+[data-testid="stSidebar"] [data-testid="stRadio"] label p {
+    color: #EAF2F8 !important;
+    font-size: 16px !important;
+    font-weight: 550 !important;
+    line-height: 1.4 !important;
+}
+
+/* Hover effect */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:hover {
+    background: rgba(8, 126, 139, 0.30) !important;
+    border-color: rgba(94, 234, 212, 0.35) !important;
+}
+
+/* Highlight selected navigation item */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) {
+    background: linear-gradient(
+        110deg,
+        #087E8B,
+        #066570
+    ) !important;
+    border: 1px solid #36B7B5 !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16) !important;
+}
+
+/* Selected navigation text */
+[data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) p {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Improve sidebar branding */
+[data-testid="stSidebar"] h1 {
+    font-size: 1.65rem !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.4px;
+}
+
+/* Improve sidebar subtitle readability */
+[data-testid="stSidebar"] [data-testid="stMarkdown"] p {
+    line-height: 1.6;
+}
+
+/* ==========================================================
+   HEALTHGUARD AI — SIDEBAR REDESIGN
+========================================================== */
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #102A43 0%,
+        #0B2035 100%
+    ) !important;
+}
+
+/* Branding area */
+.hg-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 24px 4px 20px;
+}
+
+.hg-sidebar-logo {
+    width: 49px;
+    height: 49px;
+    border-radius: 13px;
+    background: #087E8B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.hg-sidebar-title {
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 750;
+    letter-spacing: -0.4px;
+}
+
+.hg-sidebar-subtitle {
+    color: #A9C4D5;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Divider */
+.hg-sidebar-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.18);
+    margin: 8px 0 22px;
+}
+
+/* Navigation heading */
+.hg-sidebar-section {
+    color: #8EADBF;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+    margin: 8px 0 13px;
+}
+
+/* Space between navigation buttons */
+[data-testid="stSidebar"] [class*="st-key-sidebar_nav_"] {
+    margin-bottom: 9px;
+}
+
+/* Normal navigation buttons */
+[data-testid="stSidebar"] [data-testid="stBaseButton-secondary"] {
+    background: rgba(255,255,255,0.055) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 11px !important;
+    min-height: 49px !important;
+    padding: 8px 14px !important;
+    justify-content: flex-start !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Normal navigation text */
+[data-testid="stSidebar"] [data-testid="stBaseButton-secondary"] p {
+    color: #E5EFF6 !important;
+    font-size: 15px !important;
+    font-weight: 550 !important;
+}
+
+/* Hover */
+[data-testid="stSidebar"] [data-testid="stBaseButton-secondary"]:hover {
+    background: rgba(8,126,139,0.30) !important;
+    border-color: #087E8B !important;
+}
+
+/* Active navigation button */
+[data-testid="stSidebar"] [data-testid="stBaseButton-primary"] {
+    background: linear-gradient(
+        110deg,
+        #087E8B,
+        #066570
+    ) !important;
+    border: 1px solid #36B7B5 !important;
+    border-radius: 11px !important;
+    min-height: 49px !important;
+    padding: 8px 14px !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18) !important;
+}
+
+/* Active text */
+[data-testid="stSidebar"] [data-testid="stBaseButton-primary"] p {
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+/* Sidebar information card */
+.hg-sidebar-footer {
+    background: linear-gradient(
+        135deg,
+        #173951,
+        #0D5261
+    );
+    border: 1px solid rgba(94,234,212,0.25);
+    border-radius: 13px;
+    padding: 17px 15px;
+    margin-top: 28px;
+}
+
+.hg-sidebar-footer-title {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 9px;
+}
+
+.hg-sidebar-footer-text {
+    color: #D1E4ED;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.hg-sidebar-footer-version {
+    color: #5EEAD4;
+    font-size: 10px;
+    font-weight: 650;
+    margin-top: 12px;
+}
