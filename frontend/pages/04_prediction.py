@@ -31,6 +31,37 @@ healthcare professional for medical advice.
 </div>
 """
 
+def format_feature_name(feature: str) -> str:
+    heart_labels = {
+        "num__age": "Age",
+        "num__trestbps": "Resting Blood Pressure",
+        "num__chol": "Serum Cholesterol",
+        "num__thalach": "Maximum Heart Rate Achieved",
+        "num__oldpeak": "ST Depression (Oldpeak)",
+        "num__ca": "Major Vessels (CA)",
+        "cat__sex_0": "Sex – Category 0",
+        "cat__sex_1": "Sex – Category 1",
+        "cat__cp_0": "Chest Pain Type – Category 0",
+        "cat__cp_1": "Chest Pain Type – Category 1",
+        "cat__cp_2": "Chest Pain Type – Category 2",
+        "cat__cp_3": "Chest Pain Type – Category 3",
+        "cat__fbs_0": "Fasting Blood Sugar – Category 0",
+        "cat__fbs_1": "Fasting Blood Sugar – Category 1",
+        "cat__restecg_0": "Resting ECG – Category 0",
+        "cat__restecg_1": "Resting ECG – Category 1",
+        "cat__restecg_2": "Resting ECG – Category 2",
+        "cat__exang_0": "Exercise-Induced Angina – No",
+        "cat__exang_1": "Exercise-Induced Angina – Yes",
+        "cat__slope_0": "ST Slope – Category 0",
+        "cat__slope_1": "ST Slope – Category 1",
+        "cat__slope_2": "ST Slope – Category 2",
+        "cat__thal_3": "Thalassemia – Category 3",
+        "cat__thal_6": "Thalassemia – Category 6",
+        "cat__thal_7": "Thalassemia – Category 7",
+    }
+
+    return heart_labels.get(feature, feature.replace("_", " ").title())
+
 def render_result(result: dict, disease_name: str):
     risk = result.get("risk_category", "Unknown")
     score = result.get("model_score", 0)
@@ -87,7 +118,7 @@ def render_result(result: dict, disease_name: str):
             pct = abs(val) / max_val
             st.markdown(f"""
             <div class="fi-bar-container">
-                <span class="fi-label">{feat.replace('_',' ').title()}</span>
+                <span class="fi-label">{format_feature_name(feat)}</span>
                 <span class="fi-bar" style="width:{int(pct*220)}px;"></span>
                 <span style="font-size:0.75rem;color:#64748b;margin-left:6px;">{val:.4f}</span>
             </div>
